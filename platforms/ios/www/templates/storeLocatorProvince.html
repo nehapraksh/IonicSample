@@ -1,0 +1,45 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />' ng-controller="BarcodeScannerCtrl">
+    <ion-nav-bar class="bar-assertive blue">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <span class="label">Scan</span><button class="button button-icon button-clear ion-ios-barcode-outline" ng-click="scanBarcode()"></button>
+    </ion-nav-buttons>
+    <div class="tabs-striped tabs-top tabs-background-blue tabs-color-light">
+        <div class="tabs">
+            <a class="tab-item" href="#/app/storeLocator">All Stores</a>
+            <a class="tab-item active">Search By Province</a>
+        </div>
+    </div>
+    </ion-nav-bar>
+    <ion-content ng-controller="RegistryCtrl">
+        <!-- *class input-search -->
+		<div class="list  input-search">
+			<label class="item item-input item-select">Select Province  
+        <select class="icon ion-search placeholder-icon" ng-model="regForm.province" ng-change="getStores()" required>
+          <option ng-repeat="province in provinces" value="{{province.state}}">{{province.state}}</option>
+        </select>
+			</label>
+		</div>
+
+        <div class="storeLocator-wrapper" >
+        <!-- item-avatar with option button -->
+            <ion-list ng-repeat="store in stores">
+                <ion-item class="item">
+                    <h2>{{store.store_name}}</h2>
+                    <p>{{store.address}}</p>
+                    <p>{{store.phone}}</p>
+                    <ion-option-button class="dark">
+                        <i class="icon ion-ios-telephone"></i>
+                    </ion-option-button>
+                    <ion-option-button class="light">
+                        <i class="icon ion-map"></i>
+                    </ion-option-button>
+            </ion-list>
+        </div>
+	</ion-content>
+</ion-view>

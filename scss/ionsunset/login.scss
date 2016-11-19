@@ -1,0 +1,94 @@
+/**
+ * Login
+ * --------------------------------------------------
+ */
+
+.view-login {
+	background: $light;
+	.bar-header {
+		background-color: $light;
+		color: $light;
+	}
+	.header-container {
+		text-align:center;
+		background-image:url('../img/login-bg-img.png');
+    	background-color:#642f91;
+    	padding:30px;
+	}
+	.header-container p { 
+		color:$light;
+		font-weight:100;
+		font-size:18px;
+		line-height:24px;
+		margin-bottom:0;
+	}
+	.header-container svg {
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.list-inset {
+		background-color: $light;
+		margin: 20px 40px;
+		.item.item-input input {
+			color: $assertive;
+			padding-right: 0px;
+			text-align: left;
+		}
+	}
+	.list {
+		padding:30px;
+	}
+	.list {
+		.item {
+			background-color: $light;
+			border:0;
+			border-bottom:1px solid;
+			border-color: #f287ae;
+			margin:10px 0;
+			
+		}
+		.item-input {
+			padding: 6px 0;
+		}
+		span {
+			color: $grey;
+			display: block;
+			text-align: left;
+			text-transform:uppercase;
+    		font-size:12px; 
+		}
+		p {
+			color:$grey;
+			text-transform:uppercase;
+			font-size:12px;
+			text-align:center;
+		}
+		a {
+			color: $darkgrey;
+			text-decoration:none;
+		}
+	}
+	button {
+		margin-top:30px !important;
+		&.activated {
+			border: 0;
+		}
+	}
+	::-webkit-input-placeholder {
+	  	color: $assertive;
+	  	text-align: left;
+	}
+	:-moz-placeholder {
+	   	color: $assertive;
+	  	text-align: left;
+	}
+	::-moz-placeholder {
+	   	color: $assertive;
+	  	text-align: left;
+	}
+	:-ms-input-placeholder {
+	   	color: $assertive;
+	  	text-align: left;
+	}
+}

@@ -1,0 +1,125 @@
+/**
+ * Profile
+ * --------------------------------------------------
+ */
+
+.view-profile {
+	.profile-bg {
+		.item {
+			background:url('../img/blurred-placeholder.png') top center;
+  			border: 0; 
+  			padding:16px 0;
+		}
+		.item-avatar {
+			min-height: 0;
+			padding-left: 0;
+			text-align: center;
+			.content-img {
+				display: inline-block;
+				position: relative;
+				img {
+					border: 3px solid $light;
+					border-radius: 50%;
+					max-height: 100px;
+					max-width: 100px;
+					position: static;
+				}
+				span {
+					position:absolute;
+					top:0;
+					left:0;
+					width:26px;
+					height:26px;
+					background-color:$pink;
+					border:2px solid $light;
+					color:$light;
+					border-radius:50%;
+				}
+				span i {
+					position:relative;
+					top:2px;
+				}
+				.bg-img {
+					background-color: rgba(0, 0, 0, 0.3);
+					border-radius: 50%;
+					height: 100px;
+					left: 0;
+					position: absolute;
+					top:0;
+					width: 100px;
+					&:before {
+						color: $stable;
+						content: "\f3f5";
+						font-family: "Ionicons";
+						font-size: 3em;
+						position: relative;
+						top: 40px;
+					}
+				}
+			}
+			h2 {
+				color: $light;
+				font-weight:500;
+				margin-top:10px;
+			}
+			p {
+				color: $light;
+				font-size:12px;
+				font-weight:300;
+			}
+		}
+	}
+	.button-bar {
+		.button {
+			background-color: $assertive;
+			border: 0;
+			border-right: 1px solid #9565d1;
+			color: $light;
+			padding: 16px;
+			&:first-child {
+				border-radius: 0;
+			}
+			&:last-child {
+				border-right:0;
+				border-radius: 0;
+			}
+			h2 {
+				color: $light;
+				font-size: 22px;
+				margin: 0;
+			}
+			p {
+				font-size: 12px;
+				line-height: 15px;
+				margin: 0;
+				color:$light;
+			}
+		}
+	}
+	.list {
+		padding:30px;
+		.item {
+			border-left: 0;
+			border-right: 0;
+			color: $light;
+			border-color: #f287ae;
+			&:first-child {
+				border-top: none;
+			}
+			.input-label {
+				color: $grey;
+				text-transform:uppercase;
+				font-size:12px; 
+			}
+		}
+		.item-input {
+			padding: 6px 0;
+		}
+		
+	}
+}
+
+a.item p {
+	color:$grey;
+	font-size:13px;
+}

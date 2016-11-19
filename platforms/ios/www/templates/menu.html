@@ -1,0 +1,58 @@
+<!-- (*) classes assigned or controller -->
+
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+            <ion-nav-buttons side="right" ng-controller="BarcodeScannerCtrl">
+                <span class="label">Scan</span><button class="button button-icon button-clear ion-ios-barcode-outline" ng-click="scanBarcode()"></button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content>
+        <!-- *controller MenuActiveCtrl /  active items menu -->
+        <ion-side-menu side="left" expose-aside-when="large" ng-controller="MenuActiveCtrl">
+        <!-- button in header-bar -->
+
+        <ion-content>
+            <ul class="list" ng-controller="ProfileCtrl">
+                <!-- item-avatar user with status -->
+                <a class="item item-avatar" nav-clear>
+                    <img src="img/avatar.png">
+                    <h2>{{firstname}} {{lastname}}</h2>
+                    <p>{{email}}</p>
+                </a>
+                <div class="view-profile">
+                    <div class="button-bar">
+                        <a class="button" nav-clear menu-close href="#/app/notifications">
+                            <p><strong>3</strong> Notifications</p>
+                        </a>
+                        <a class="button" nav-clear menu-close href="#/app/profile">
+                            <p>Edit Profile</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- menu items  with style active, inactive on off -->
+                <a class="menu item item-icon-right" ng-class="{active:isActive('#/app/checklist')}" nav-clear menu-close href="#/app/checklist">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="green">Checklist</h2><p>Duis eu consequat nisi.</p>
+                </a>
+                <a class="menu item item-icon-right" ng-class="{active:isActive('/app/browseProducts')}" nav-clear menu-close href="#/app/browseProducts">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="orange">Browse Products</h2><p>Duis eu consequat nisi.</p>
+                </a>
+                <a class="item item-icon-right" ng-class="{active:isActive('/app/storeLocator')}" nav-clear menu-close href="#/app/storeLocator">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="blue">Store Locator</h2><p>Duis eu consequat nisi.</p>
+                </a>
+                <!-- *class quit / style logout
+                <a class="item item-icon-left quit" nav-clear menu-close ng-click="infoApp2()">
+                    <i class="icon ion-ios-arrow-thin-right"></i>Logout
+                </a>-->
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

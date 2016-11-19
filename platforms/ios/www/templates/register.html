@@ -1,0 +1,40 @@
+<!-- (*) assigned classes -->
+
+<!-- *class view-login / background color -->
+<ion-view hide-nav-bar="true" title='<img class="title-image" src="img/title-logo.png" />'>
+  	<ion-content ng-controller="ImagePickerController">
+		<div class="register-wrapper">
+			<!-- *class logo / logo company or app -->
+			<h1>Register</h1>
+	            <a class="item item-avatar" nav-clear ng-click="getImageSaveContact()">
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+						<!-- *bg-img -->
+						<div class="bg-img"><span>Add Photo</span></div>
+	            	</div>
+		        </a>
+
+			<form name="myForm" novalidate="">
+			<div class="list" ng-controller="LoginCtrl">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" placeholder="" ng-model="data.firstname" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last name</span>
+					<input type="text" placeholder="" ng-model="data.lastname" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email Address</span>
+					<input type="email" placeholder="" ng-model="data.username" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Password</span>
+					<input type="text" placeholder="" ng-model="data.password" ng-minlength="6" required>
+				</label>
+				<a class="button button-block button-pink" ng-disabled="myForm.$invalid" ng-click="login(data)">Register</a>
+			</div>
+			</form>
+		</div>
+  	</ion-content>
+</ion-modal-view>

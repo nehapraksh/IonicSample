@@ -1,0 +1,58 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-image-picker": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "ionic-plugin-deploy": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-dbcopy": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.sampleIonicApp772632"
+        }
+    }
+}

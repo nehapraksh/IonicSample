@@ -1,0 +1,50 @@
+/**
+ * Intro
+ * --------------------------------------------------
+ */
+
+.intro-wrapper {
+    background:#9264cd;
+}
+
+.slider-slide {
+    height:100vh;
+    padding:50px 30px 0;
+}
+
+.box {
+   background:#fff;
+   padding:30px 0 0;
+   border-radius:5px 5px 0 0;
+   text-align:center;
+   position:relative;
+   height:550px;
+   h1 {
+       font-family: 'Archer';
+       font-weight:500;
+       color:#9264cd;
+       margin-bottom:25px;
+   }
+   p {
+       color:#9264cd;
+       font-weight:300;
+       font-size:16px;
+       line-height:22px;
+       padding:0 30px;
+   }
+   button {
+       position:absolute;
+       bottom:0;
+       margin:0 !important;
+   }
+}
+.slider-pager .slider-pager-page {
+    color:#fff;
+}
+
+.slider-pager {
+    bottom:27px !important;
+}
+
+
+

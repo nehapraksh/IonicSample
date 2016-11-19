@@ -1,0 +1,62 @@
+<!-- (*) assigned classes -->
+<ion-view title='<img class="title-image" src="img/title-logo.png" />' ng-controller="BarcodeScannerCtrl" >
+<div class="bar bar-header">
+    <ion-nav-bar class="bar-assertive orange">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right" >
+        <span class="label">Scan</span><button class="button button-icon button-clear ion-ios-barcode-outline" ng-click="scanBarcode()"></button>
+    </ion-nav-buttons>
+	</ion-nav-bar>
+	</div>
+
+	<div class="bar bar-subheader orange item-input-inset" >
+   <ion-scroll direction="x" class="wide-as-needed">
+      <button class="button button-clear category"  ng-repeat="category in category" ng-click="productPage(category.id)">{{category.name}}</button>
+   </ion-scroll>
+  </div>
+	<ion-content >
+		<div class="browseProducts-wrapper">
+            <div class="image-container">
+                <img src="img/products-placeholder.jpg">
+                <h2>Baby Care</h2>
+            </div>
+			<ion-list ng-repeat="item in items">
+        <div ng-repeat="attr in item.custom_attributes">
+         <div ng-if="attr.attribute_code=='small_image'">
+				<ion-item class="item">
+					<label class="checkbox">
+					<input type="checkbox" ng-model="isChecked" ng-change="addToRegistry(abc,item.id,isChecked)" ng-init="isChecked=false">
+					</label>
+                    <img ng-src="{{imageUrl}}{{attr.value}}" ng-model="abc.image">
+                    <div class="item-content-holder">
+                        <h2 ng-model="abc.name">{{item.name}}</h2>
+                        <p>SKU {{item.sku}}</p>
+                        <span class="price">R{{item.price}}</span>
+                    </div>
+                    <div class="quantity">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[{{item.sku}}]" ng-click="changeQty({{item.sku}},1)">
+                                <i class="icon ion-plus"></i>
+                            </button>
+                        </span>
+                        <input ng-init="selectedItems[item.sku]=1" type="text" id="quant_{{item.sku}}" name="quant[{{item.sku}}]" class="form-control input-number" value="1" min="1" max="10" ng-model="selectedItems[item.sku]">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default btn-number" ng-disabled="selectedItems[item.sku]==1" data-type="minus" data-field="quant[{{item.sku}}]" ng-click="changeQty({{item.sku}},-1)">
+                                <i class="icon ion-minus"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <ion-option-button>
+                        <i class="icon ion-ios-trash"></i>
+                    </ion-option-button>
+                </ion-item>
+             </div>
+          </div>
+			</ion-list>
+       <ion-infinite-scroll on-infinite="loadMore(searchCriteria.page_size,searchCriteria.current_page)"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</ion-view>

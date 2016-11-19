@@ -1,0 +1,33 @@
+<!-- (*) assigned classes -->
+
+<!-- *class view-login / background color -->
+<ion-view hide-nav-bar="true">
+  	<ion-content>
+		<div class="register-wrapper">
+			<!-- *class logo / logo company or app -->
+			<h1>Register</h1>
+
+			<form name="myForm" novalidate="">
+			<div class="list" ng-controller="LoginCtrl">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">First Name</span>
+					<input type="text" placeholder="" ng-model="data.firstname" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Last name</span>
+					<input type="text" placeholder="" ng-model="data.lastname" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Email Address</span>
+					<input type="email" placeholder="" ng-model="data.username" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Password</span>
+					<input type="text" placeholder="" ng-model="data.password" ng-minlength="6" required>
+				</label>
+				<a class="button button-block button-pink" ng-disabled="myForm.$invalid" ng-click="login(data)">Register</a>
+			</div>
+			</form>
+		</div>
+  	</ion-content>
+</ion-modal-view>

@@ -1,0 +1,53 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'>
+
+	<ion-content>
+		<!-- *view-profile / container -->
+		<div class="view-profile">
+			<!-- *profile-bg / background color -->
+			<div class="profile-bg" ng-controller="ProfileCtrl">
+	            <div class="item item-avatar" nav-clear>
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+		            	<img src="img/avatar.png">
+						<span><i class="icon ion-ios-bell"></i></span>
+	            	</div>
+		            <h2>{{firstname}} {{lastname}}</h2>
+		            <p>{{email}}</p>
+					<div ng-if="registry=='null'" >
+					 <a class="button button-small button-green" href="#/app/createRegistry">Create My Registry</a>
+		        </div>
+						<div ng-if="registry!=='null'">
+						 <a class="button button-small button-green" href="#/app/myRegistry">View My Registry</a>
+			        </div>
+          </div>
+		    </div>
+		    <!-- button bar with style NOTIFICATIONS / SETTINGS -->
+		    <div class="button-bar">
+				<a class="button"  href="#/app/notifications">
+					<p><strong></strong> Notifications</p>
+				</a>
+				<a class="button" href="#/app/profile">
+					<p>Edit Profile</p>
+				</a>
+			</div>
+                <a class="item item-icon-right" ng-class="{active:isActive('/app/checklist')}" href="#/app/checklist">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="green">Checklist</h2><p>Duis eu consequat nisi.</p>
+                </a>
+                <a class="item item-icon-right" ng-class="{active:isActive('/app/browseProducts')}" href="#/app/browseProducts">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="orange">Browse Products</h2><p>Duis eu consequat nisi.</p>
+                </a>
+                <a class="item item-icon-right" ng-class="{active:isActive('/app/storeLocator')}" href="#/app/storeLocator">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="blue">Store Locator</h2><p>Duis eu consequat nisi.</p>
+                </a>
+				<a class="item item-icon-right" ng-class="{active:isActive('/app/intro')}" href="#/app/intro">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="pink">Intro Guides</h2><p>Duis eu consequat nisi.</p>
+                </a>
+				<a class="item item-icon-right" ng-class="{active:isActive('/app/register')}" href="#/app/register">
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="pink">Register</h2><p>Duis eu consequat nisi.</p>
+                </a>
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>

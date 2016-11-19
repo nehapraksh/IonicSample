@@ -1,0 +1,37 @@
+<!-- (*) assigned classes -->
+<ion-view >
+  <div class="bar bar-header">
+    <ion-nav-bar class="bar-assertive orange">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left">Browse Products</button>
+    </ion-nav-buttons>
+	</ion-nav-bar>
+	</div>
+<div ng-controller="ProductCtrl">
+	<div class="bar bar-subheader orange item-input-inset">
+   <ion-scroll direction="x" class="wide-as-needed">
+      <button class="button button-clear category" ng-repeat="category in category" ng-click="productPage(category.id)">{{category.name}}</button>
+   </ion-scroll>
+  </div>
+	<ion-content >
+		<div class="browseProducts-wrapper">
+			<ion-list ng-repeat="item in items">
+        <div ng-repeat="attr in item.custom_attributes">
+         <div ng-if="attr.attribute_code=='small_image'">
+				<ion-item class="item">
+                    <img ng-src="{{imageUrl}}{{attr.value}}">
+                    <div class="item-content-holder">
+                        <h2>{{item.name}}</h2>
+                        <p>SKU {{item.sku}}</p>
+                        <span class="price">Rs{{item.price}}</span>
+                    </div>
+                </ion-item>
+             </div>
+          </div>
+			</ion-list>
+       <ion-infinite-scroll on-infinite="loadMore(searchCriteria.page_size,searchCriteria.current_page)"></ion-infinite-scroll>
+		</div>
+	</ion-content>
+</div>
+</ion-view>

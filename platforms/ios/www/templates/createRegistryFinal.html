@@ -1,0 +1,42 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'>
+
+	<ion-content>
+		<!-- *view-profile / container -->
+		<div class="view-profile">
+			<!-- *profile-bg / background color -->
+			<div class="profile-bg" ng-controller="ProfileCtrl">
+	            <div class="item item-avatar" nav-clear>
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+		            	<img src="img/avatar.png">
+	            	</div>
+		            <h2>{{firstname}}{{lastname}}</h2>
+		            <p>{{email}}</p>
+		        </div>
+
+		    </div>
+			<form ng-controller="RegistryCtrl" name="myForm" novalidate="">
+				<div>{{formData}}</div>
+			<div class="list">
+				{{formData.registrydate}}
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Co-Registrant</span>
+					<input type="email" placeholder="" ng-model="regForm.co_registant" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Event Location</span>
+					<input type="text" placeholder="" ng-model="regForm.location" required>
+				</label>
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Guest Message</span>
+					<textarea ng-model="regForm.message" required></textarea>
+				</label>
+				<button class="button button-block button-pink" ng-disabled="myForm.$invalid" ng-click="createRegistry(regForm)">Create Registry</button>
+			</div>
+			</form>
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,90 @@
+/**
+ * Register
+ * --------------------------------------------------
+ */
+
+.register-wrapper {
+    background:#9264cd;
+    height:100vh;
+    text-align:center;
+    padding-top:30px;
+    h1 {
+        font-family: 'Archer';
+        font-weight:500;
+        color:#fff;
+        margin-bottom:25px;
+    }
+    .item-avatar {
+			min-height: 0;
+			margin:0;
+            padding:0;
+			text-align: center;
+            background-color:transparent;
+            border:0;
+            box-sizing:border-box;
+			.content-img {
+				display: inline-block;
+				position: relative;
+                height:100px;
+                width:100px;
+				.bg-img {
+					background-color: rgba(0, 0, 0, 0.3);
+					border-radius: 50%;
+					height: 100px;
+					left: 0;
+					position: absolute;
+					top:0;
+					width: 100px;
+                    span {
+                        color:#fff;
+                        font-size:12px;
+                        text-transform:uppercase;
+                        position:relative;
+                        top:35px;
+                    }
+					&:before {
+						color: $stable;
+						content: "\f3f5";
+						font-family: "Ionicons";
+						font-size: 3em;
+						position: relative;
+						top: 28px;
+                        display:block;
+					}
+				}
+			}
+}
+    .list {
+		padding:30px;
+        text-align:left;
+		.item {
+			border-left: 0;
+			border-right: 0;
+			color: $light;
+			border-color: #f287ae;
+			&:first-child {
+				border-top: none;
+			}
+			.input-label {
+				color: #c0afe2;
+				text-transform:uppercase;
+				font-size:12px; 
+			}
+		}
+		.item-input {
+			padding: 6px 0;
+		}
+        .item-input input {
+            background-color:#9264cd;
+            color:#fff;
+        }
+		
+	}
+}
+
+
+
+
+
+
+

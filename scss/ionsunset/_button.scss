@@ -1,0 +1,62 @@
+
+/**
+ * Buttons
+ * --------------------------------------------------
+ */
+
+.button {
+	&.button-light {
+		border-color: $light;
+	}
+	&.button-stable {
+		border-color: $stable;
+	}
+	&.button-assertive {
+		border-color: $assertive;
+	}
+	&.button-positive {
+		border-color: $positive;
+	}
+	&.button-balanced {
+		border-color: $balanced;
+	}
+	&.button-calm {
+		border-color: $calm;
+	}
+	&.button-royal {
+		border-color: $royal;
+		color: #818181;
+	}
+	&.button-dark {
+		border-color: $dark;
+	}
+	&.button-green {
+		background-color: $green;
+		color:$light;
+		font-size:15px;
+  		margin:10px 0;
+  		font-weight:500;
+		font-family:'Poppins';
+		padding:12px 25px;
+		line-height:15px;
+	}
+	&.button-pink {
+		background-color: $lightpink;
+		border-radius:0;
+		border:0;
+		border-bottom:2px solid $pink;
+		color:$light;
+		font-size:15px;
+  		margin:30px 0 10px;
+  		font-weight:500;
+		font-family:'Poppins';
+		padding:12px 25px;
+		line-height:21px;
+	}
+}
+
+.checkbox input:checked:before, 
+.checkbox input:checked + .checkbox-icon:before {
+	background-color:#b3cb25;
+	border-color:#b3cb25;
+}

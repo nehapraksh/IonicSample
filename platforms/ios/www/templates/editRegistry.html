@@ -1,0 +1,61 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'>
+
+	<ion-content>
+		<!-- *view-profile / container -->
+		<div class="view-profile">
+			<!-- *profile-bg / background color -->
+			<div class="profile-bg" ng-controller="ProfileCtrl">
+	            <div class="item item-avatar" nav-clear>
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+		            	<img src="img/avatar.png">
+	            	</div>
+		            <h2>{{firstname}} {{lastname}}</h2>
+		            <p>{{email}}</p>
+		        </div>
+		    </div>
+
+		<form ng-controller="MyRegistryCtrl" name="myForm" novalidate="" data-ng-init="init()">
+			<!--<h1>Selected Provinces {{selectedProvinces}}</h1>-->
+			<div class="list">
+				<label class="item item-input item-stacked-label">
+							<span class="input-label">Registry Name</span>
+							<input type="text" placeholder="" value="{{registry.name}}" required>
+						</label>
+				<label class = "item item-input item-select">
+			        <div class = "input-label">
+			          Province
+			        </div>
+			      <select ng-model="regForm.province" ng-change="getStores()" required>
+							<option ng-repeat="province in provinces" value="{{province.state}}">{{province.state}}</option>
+					  </select>
+			  </label>
+					<label class = "item item-input item-select">
+			    <div class = "input-label">
+				     Store
+			    </div>
+			    <select ng-model="regForm.store" required>
+				    <option ng-repeat="store in stores" value="{{store.store_name}}">{{store.store_name}}</option>
+			    </select>
+		    </label>
+				<!--<label class="item item-input item-stacked-label">
+					<span class="input-label">Province</span>
+					<input type="text" placeholder="">-->
+
+				<!--<label class="item item-input item-stacked-label">
+					<span class="input-label">Store</span>
+					<input type="text" placeholder="">
+				</label>-->
+				<label class="item item-input item-stacked-label">
+					<span class="input-label">Event Date</span>
+					<input type="date" placeholder="" value="{{registry.event_at}}">
+				</label>
+				<a class="button button-block button-pink" ng-disabled="myForm.$invalid" ng-click="submitRegForm()">Next Step</a>
+			</div>
+			</form>
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>

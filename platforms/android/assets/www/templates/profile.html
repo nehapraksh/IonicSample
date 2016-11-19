@@ -1,0 +1,50 @@
+<!-- (*) assigned classes -->
+<div ng-controller="ProfileCtrl">
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'>
+<ion-nav-buttons side="right">
+			<button class="button button-icon ion-ios-checkmark-empty" ng-click="editUser(data)"></button>
+	</ion-nav-buttons>
+
+	<ion-content>
+		<!-- *view-profile / container -->
+		<div class="view-profile">
+			<!-- *profile-bg / background color -->
+			<div class="profile-bg" ng-controller="ImagePickerController">
+	            <a class="item item-avatar" nav-clear ng-click="getImageSaveContact()">
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+		            	<img src="img/avatar.png">
+						<!-- *bg-img -->
+						<div class="bg-img" ng-controller="ProfileCtrl"></div>
+	            	</div>
+		            <h2>{{firstname}} {{lastname}}</h2>
+		            <p>{{email}}</p>
+		        </a>
+		    </div>
+			<!-- list with inputs style -->
+			<div class="list" >
+				<label class="item item-input item-stacked-label" >
+				    <ion-label>First Name</ion-label>
+				    <input type="text" ng-model="data.firstname" data-ng-init="data.firstname = firstname">
+				</label>
+				<label class="item item-input item-stacked-label">
+						<ion-label>Last Name</ion-label>
+						<input type="text" ng-model="data.lastname" data-ng-init="data.lastname = lastname">
+				</label>
+			<!--	<label class="item item-input item-stacked-label">
+				    <ion-label>Password</ion-label>
+				    <input type="password" value="12345678">
+				</label>-->
+				<label class="item item-input item-stacked-label">
+				    <ion-label>Email</ion-label>
+				    <input type="email" ng-model="data.email" data-ng-init="data.email = email">
+				</label>
+				<label class="item item-input item-stacked-label">
+				    <ion-label>Registry Name</ion-label>
+				    <input type="text" value="">
+				</label>
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>
+</div>

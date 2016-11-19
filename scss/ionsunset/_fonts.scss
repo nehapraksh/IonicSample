@@ -1,0 +1,60 @@
+
+// Fonts
+// -------------------------------
+
+body,
+.ionic-body,
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Poppins';
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Regular.eot');
+  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+       url('../fonts/Poppins-Regular.woff') format('woff'),
+       url('../fonts/Poppins-Regular.ttf') format('truetype'),
+       url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg'),
+       url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype');
+	font-style: normal;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-Medium.eot');
+  src: url('../fonts/Poppins-Medium.woff2') format('woff2'),
+       url('../fonts/Poppins-Medium.woff') format('woff'),
+       url('../fonts/Poppins-Medium.ttf') format('truetype'),
+       url('../fonts/Poppins-Medium.svg#Poppins-Medium') format('svg'),
+       url('../fonts/Poppins-Medium.eot?#iefix') format('embedded-opentype');
+	font-style: normal;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../fonts/Poppins-SemiBold.eot');
+  src: url('../fonts/Poppins-SemiBold.woff2') format('woff2'),
+       url('../fonts/Poppins-SemiBold.woff') format('woff'),
+       url('../fonts/Poppins-SemiBold.ttf') format('truetype'),
+       url('../fonts/Poppins-SemiBold.svg#Poppins-SemiBold') format('svg'),
+       url('../fonts/Poppins-SemiBold.eot?#iefix') format('embedded-opentype');
+	font-style: normal;
+	font-weight: 500;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Archer';
+  src: url('../fonts/Archer-Bold.eot');
+  src: url('../fonts/Archer-Bold.woff2') format('woff2'),
+       url('../fonts/Archer-Bold.woff') format('woff'),
+       url('../fonts/Archer-Bold.ttf') format('truetype'),
+       url('../fonts/Archer-Bold.svg#Archer-Bold') format('svg'),
+       url('../fonts/Archer-Bold.eot?#iefix') format('embedded-opentype');
+  font-weight: 500;
+  font-style: normal;
+}

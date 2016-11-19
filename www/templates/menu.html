@@ -1,0 +1,45 @@
+<!-- (*) classes assigned or controller -->
+<ion-side-menus enable-menu-with-back-views="false" >
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive">
+            <ion-nav-back-button></ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+        </ion-side-menu-content>
+        <!-- *controller MenuActiveCtrl /  active items menu -->
+        <ion-side-menu side="left" expose-aside-when="large" ng-controller="MenuActiveCtrl">
+        <!-- button in header-bar -->
+        <ion-content ng-controller="ProfileCtrl">
+            <ul class="list">
+                <!-- item-avatar user with status -->
+                <a class="item item-avatar" nav-clear>
+                    <img src="img/avatar.png">
+                    <h2>{{firstname}} {{lastname}}</h2>
+                    <p>{{email}}</p>
+                </a>
+                <!-- menu items  with style active, inactive on off -->
+                <a class="menu item item-icon-right" ng-class="{active:isActive('#/app/checklist')}" nav-clear menu-close>
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="orange">Browse Product</h2><p>Get all products</p>
+                </a>
+                <a class="menu item item-icon-right" ng-class="{active:isActive('#/app/checklist')}" nav-clear menu-close>
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="pink">View My WishList</h2><p>Get your wishlist products</p>
+                </a>
+                <a class="menu item item-icon-right" ng-class="{active:isActive('#/app/checklist')}" nav-clear menu-close>
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="green">View My CartList</h2><p>Get your CartList products</p>
+                </a>
+                <a class="menu item item-icon-right" ng-class="{active:isActive('/app/browseProducts')}" nav-clear menu-close>
+                    <i class="icon ion-ios-arrow-right"></i><h2 class="purple">View MY Order History</h2><p>Details of your orders</p>
+                </a>
+                <!-- *class quit / style logout
+                <a class="item item-icon-left quit" nav-clear menu-close ng-click="infoApp2()">
+                    <i class="icon ion-ios-arrow-thin-right"></i>Logout
+                </a>-->
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

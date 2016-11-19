@@ -1,0 +1,51 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'ng-controller="BarcodeScannerCtrl" >
+<div class="bar bar-header">
+    <ion-nav-bar class="bar-assertive green">
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-ios-drag" menu-toggle="left"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <span class="label">Scan</span><button class="button button-icon button-clear ion-ios-barcode-outline" ng-click="scanBarcode()"></button>
+    </ion-nav-buttons>
+	</ion-nav-bar>
+	</div>
+  <div ng-controller="CheckListCtrl" >
+	<div class="bar bar-subheader green item-input-inset" data-ng-init="init()">
+    <ion-scroll direction="x" class="wide-as-needed">
+       <button class="button button-clear category"  ng-repeat="category in categories" ng-click="getChecklist(category.id)">{{category.category_name}}</button>
+    </ion-scroll>
+    </div>
+	<ion-content >
+        <!-- *class input-search -->
+		<div class="list list-inset input-search">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input type="text" placeholder="Search For an Item in Checklist" ng-keyup="$event.keyCode == 13 && search()" ng-model="searchItem.name">
+			</label>
+		</div>
+		<div class="list list-inset input-add">
+			<label class="item item-input">
+				<i class="icon ion-plus placeholder-icon"></i>
+				<input type="text" placeholder="Add item to checklist" ng-keyup="$event.keyCode == 13 && insert()" ng-model="newItem.name">
+			</label>
+		</div>
+        <!-- item-avatar with option button -->
+		<div class="checkList-wrapper" data-ng-init="getChecklist(1)">
+			<ion-list ng-repeat="list in lists">
+				<ion-item class="item">
+					<label class="checkbox">
+					<input type="checkbox" ng-model="isChecked" ng-change="checkCheckList(list.id,isChecked)" ng-checked="list.is_added==1">
+					</label>
+					<span>{{list.todo_list_name}}</span>
+                    <ion-option-button>
+                        <i class="icon ion-ios-trash"></i>
+                    </ion-option-button>
+                </ion-item>
+			</ion-list>
+		</div>
+	</ion-content>
+</div>
+</ion-view>

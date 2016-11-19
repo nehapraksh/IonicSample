@@ -1,0 +1,14 @@
+<!-- (*) assigned classes -->
+<ion-view title='<img class="title-image" src="img/title-logo.png" />' ng-controller="NotificationCtrl" data-ng-init="init()">
+	<ion-content>
+		<ion-list ng-repeat="notification in notifications">
+            <ion-item class="item-avatar item-button-right">
+                <img ng-src="{{imageUrl}}{{notification.product_image}}">
+                <h2>{{notification.product_name}}</h2>
+                <!-- *class time / icon time -->
+								<div ng-if="notification.is_added=='true'"><p class="time">has been added to your registry</p></div>
+									<div ng-if="notification.is_added=='false'"><p class="time">has been removed from your registry</p></div>
+            </ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

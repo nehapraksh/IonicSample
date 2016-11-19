@@ -1,0 +1,26 @@
+<!-- (*) assigned classes -->
+
+<!-- *class view-login / background color -->
+<ion-modal-view class="view-login" ng-controller="LoginCtrl">
+  	<ion-content>
+	  	<!-- *class logo / logo company or app -->
+	  	<div class="header-container">
+			<p>Please sign in to your Magento account!</p>
+	  	</div>
+	  	<!-- form login with button sing in and facebook login style -->
+		<form>
+		   <div class="list" ng-model="myForm" novalidate="">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Email Address</span>
+				<input type="email" placeholder="" ng-model="data.username" required>
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Password</span>
+				<input type="password" placeholder="" ng-model="data.password" ng-minlength="6" required>
+			</label>
+			<button class="button button-block button-pink" ng-disabled="myForm.$invalid" ng-click="login(data)">Sign In</button>
+      <p>Don't have an account? <label ng-click="openRegister()">Register An Account</label></p>
+		 </div>
+		</form>
+  	</ion-content>
+</ion-modal-view>

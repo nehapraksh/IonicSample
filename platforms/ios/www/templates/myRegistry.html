@@ -1,0 +1,58 @@
+<!-- (*) assigned classes -->
+
+<ion-view title='<img class="title-image" src="img/title-logo.png" />'>
+
+	<ion-content ng-controller="MyRegistryCtrl" data-ng-init="init()">
+		<!-- *view-profile / container -->
+		<div class="view-profile">
+			<!-- *profile-bg / background color -->
+			<div class="profile-bg">
+	            <div class="item item-avatar" nav-clear>
+					<!-- *content-img / container -->
+	            	<div class="content-img">
+		            	<img src="img/avatar.png">
+						<span><i class="icon ion-ios-bell"></i></span>
+	            	</div>
+		            <h2>{{registry.name}}</h2>
+		            <p>{{registry.location}}</p>
+					<p>{{registry.event_at}}</p>
+		        </div>
+
+		    </div>
+		    <!-- button bar with style NOTIFICATIONS / SETTINGS -->
+		    <div class="button-bar">
+				<a class="button"  href="#/app/editRegistry">
+					<p>Edit My Registry</p>
+				</a>
+				<a class="button"  href="#/app/socialShare">
+					<p>Share My Registry</p>
+				</a>
+			</div>
+			<div class="browseProducts-wrapper myRegistry">
+   <ion-list ng-repeat="item in items">
+	 <ion-item class="item">
+		 <label class="checkbox">
+		 <input type="checkbox" ng-model="isChecked" ng-init="isChecked=true">
+		 </label>
+							 <img ng-src="http://138.68.80.175/pub/media/catalog/product{{item.product.image}}">
+							 <div class="item-content-holder">
+									 <h2>{{item.product.name}}</h2>
+									 <p>SKU {{item.product.sku}}</p>
+									 <span class="price">R{{item.product.price}}</span>
+							 </div>
+							 <div class="quantity holder" ng-if="item.qty=='null'">
+									 <input type="text" name="quant[1]" class="form-control input-number" value="1" ng-keyup="$event.keyCode == 13 && editItem(item.item_id)" ng-model="selected.qty">
+							 </div>
+							 <div class="quantity holder" ng-if="item.qty!=='null'">
+									<input type="text" name="quant[1]" class="form-control input-number" value="{{item.qty}}" ng-keyup="$event.keyCode == 13 && editItem(item.item_id)" ng-model="selected.qty">
+							</div>
+							 <ion-option-button ng-click="deleteItem(item.item_id,item.product.name,item.product.image)">
+									 <i class="icon ion-ios-trash"></i>
+							 </ion-option-button>
+					 </ion-item>
+	 </ion-list>
+      </div>
+	        </div>
+		</div>
+	</ion-content>
+</ion-view>
